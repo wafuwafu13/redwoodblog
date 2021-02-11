@@ -1,7 +1,8 @@
 export const QUERY = gql`
-  query BlogPostsQuery {
-    blogPosts {
-      id
+  query {
+    posts {
+      title
+      body
     }
   }
 `
@@ -12,6 +13,6 @@ export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
-export const Success = ({ blogPosts }) => {
-  return JSON.stringify(blogPosts)
+export const Success = ({ posts }) => {
+  return JSON.stringify(posts)
 }
